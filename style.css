@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2f2f2;
+    background-image: url(purple-mountain-landscape.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 1rem;
+    background: transparent;
+}
+
+.form-container {
+    background-color: #fff;
+    border-radius: 35px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.24);
+    overflow: hidden;
+    background: transparent;
+
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    
+}
+
+.form-container form h2 {
+    color: #000000;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.form-container form .field {
+    position: relative;
+    margin-bottom: 1rem;
+    
+}
+
+.form-container form .field input {
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    outline: none;
+    font-size: 1rem;
+    background: #a35bd3;
+    border-radius: 15px;
+    color: #fff;
+
+}
+
+.form-container form .field input:focus {
+    border-bottom-color: #ffffff;
+}
+
+.form-container form .field label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    color: #ffffff;
+    pointer-events: none;
+    transition: transform 0.2s ease-in-out;
+}
+
+.form-container form .field input:focus ~ label,
+.form-container form .field input:valid ~ label {
+    transform: translateY(-150%);
+    color: #007bff;
+    font-size: 0.7rem;
+    padding: 0;
+}
+
+.form-container form .field input::placeholder {
+    color: #ffffff;
+}
+
+.form-container form .field button {
+    padding: 0.5rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.form-container form .field button:hover {
+    background-color: #ffffff;
+}
+
+.form-container form .links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: #ffffff;
+}
+
+.form-container form .links a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.form-container form .links a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        width: 100%;
+    }
+
+    .form-container form {
+        padding: 1.5rem;
+    }
+
+    .form-container form .field input {
+        padding: 0.75rem;
+    }
+
+    .form-container form .field label {
+        padding: 0.75rem;
+    }
+
+    .form-container form .field button {
+        padding: 0.75rem;
+    }
+}
